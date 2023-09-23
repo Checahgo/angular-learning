@@ -1,0 +1,23 @@
+<h1>Contact Form</h1>
+<form [formGroup]="contactForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your e-mail</mat-label>
+    <input matInput formControlName="email">
+    <mat-error *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your message</mat-label>
+    <input matInput formControlName="message">
+  </mat-form-field>
+  <button mat-raised-button (click)="submitForm()">Submit</button>
+</form>
+
+<app-form-progress [validFieldPercent]="runPercent"></app-form-progress>

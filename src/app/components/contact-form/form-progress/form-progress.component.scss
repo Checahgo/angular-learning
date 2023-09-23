@@ -1,0 +1,9 @@
+.progress-wrapper {
+  transform: scaleY(5);
+  border-radius: 50%;
+}
+mat-progress-bar.profile {
+  .mdc-linear-progress__bar-inner {
+    border-top-right-radius: 50% 10px;
+  }
+}
