@@ -16,12 +16,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import { FormProgressComponent } from './components/contact-form/form-progress/form-progress.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
-    FormProgressComponent
+    FormProgressComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
